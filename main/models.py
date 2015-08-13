@@ -12,6 +12,8 @@ class Cereal(models.Model):
 	name = models.CharField(max_length=30, unique=True)
 	type = models.CharField(max_length=2, null=True)
 	manufacturer = models.ForeignKey('main.Manufacturer', null=True)
+	image = models.ImageField(upload_to="cereal", null=True)
+	info = models.TextField()
 
 
 	def __unicode__(self):
